@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../js/echarts.js"></script>
+</head>
+<body>
+    <div id="main" style="width:600px;height:400px"></div>
+    <script type="text/javascript">
+    var myChart=echarts.init(document.getElementById("main"));
+    var option={
+        title: {
+            text: '影响健康、寿命的各类因素',
+            subtext: 'WHO统计调查报告',
+            left: 'center'
+        },
+        tooltip: {  // 提示框组件
+            trigger: 'item',
+            formattre:"{a} <br/>{b} : {c} ({d}%)"
+        },
+        legend: {  // 配置图例组件
+            orient: 'vertical',   //图例列表的布局朝向,垂直
+            left: 62,   // 设置图例左边距
+            top:28,   // 设置图例顶边距
+            type:'scroll',   //设置为滚动图例，默认值为'plain'（普通图例，不滚动）
+            backgroundColor:'pink',
+            borderColor:'rgba(178,34,34,0.8)',
+            borderWidth:4,
+            padding:10,
+            itemGap:20, textStyle:{color:'red'},
+            data:['生活方式','遗传因素','社会因素','医疗条件','气候环境']
+        },
+        toolbox:{   // 配置工具箱组件
+            show:true,   // 设置工具箱组件是否显示
+            left:444,   // 设置工具箱左边距
+            top:28,   // 设置工具箱顶边距
+            orient: 'horizontal',  //设置布局方式，默认为水平布局，可选:'horizontal'¦'vertical'
+            backgroundColor: 'rgba(0,0,0,0)',  //设置工具箱背景颜色
+            borderColor: '#ccc',  //设置工具箱边框颜色
+            borderWidth: 0,  //设置工具箱边框线宽，单位px,默认为0（无边框）
+			padding: 5,  //设置工具箱内边距，单位px，默认各方向内边距为5
+            feature:{
+                mark:{show:true},
+                DataView:{show:true,readOnly:false},
+                magicType:{
+                    show:true,
+                    type:['pie','funnel'],
+                    option:{
+                        funnel:{
+                            x:'25%',
+                            width:'50%',
+                            funnelAlign:'left',
+                            max:1548
+                        }
+                    }
+                },
+                restore:{shpw:true},
+                saveAsImage:{show:true}
+            }
+        },
+        calculable:true,
+        series: [
+            {
+            name: '访问来源',
+            type: 'pie',
+            center:['58%','55%'],   // 圆心坐标，默认值为['50%','50%']
+            radius: ['45%','75%'],  // 设置半径,默认值为[0,'75%'],圆环['45%','75%'],内外半径
+            clockWise:true,
+            data: [
+                { value: 60, name: '生活方式' },
+                { value: 15, name: '遗传因素' },
+                { value: 10, name: '社会因素' },
+                { value: 8, name: '医疗条件' },
+                { value: 7, name: '气候环境' }
+            ],
+            emphasis: {
+                itemStyle: {
+                shadowBlur: 10,
+                shadowOffsetX: 0,
+                shadowColor: 'rgba(0, 0, 0, 0.5)'
+                }
+            }
+            }
+        ]
+        };
+    myChart.setOption(option);
+</script>
+</body>
+</html>

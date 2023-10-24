@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../js/echarts.js"></script>
+</head>
+<body>
+<div id="main" style="width:600px;height:400px"></div>
+<script type="text/javascript">
+var myChart=echarts.init(document.getElementById("main"));
+
+var option={
+  title: {
+    text:'期末考试语文成绩',
+    left:'center'
+  },
+  xAxis: {},
+  yAxis:{
+    type: 'category',
+    data:['张三','李四','王五','小明','小梅']
+  },
+  series:[{
+    name:'语文',
+    type:'bar',
+    markPoint:{//标注最大值最小值
+        data:[
+            {
+                type:'max',name:'最大值'
+            },
+            {
+                type:'min',name:'最小值'
+            }
+        ]
+    },
+    markLine:{
+        data:[
+            {
+                type:'average',name:'平均值'
+            }
+        ]
+    },
+    label:{
+        rotate:60,
+        show:true
+    },
+    barWidth:2,
+    data:[85,88,98,68,75]
+  }]
+};
+myChart.setOption(option);	
+</script>
+</body>
+</html>

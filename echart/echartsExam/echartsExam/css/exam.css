@@ -1,0 +1,20 @@
+.hd {
+  height: 2rem;
+  background-color: #f18b8b;
+}
+.bd {
+  display: flex;
+}
+.bd div {
+  background: #c2eac0;
+  margin: 0.625rem;
+  flex: 1;
+}
+.bd div .panel {
+  margin: 0.3125rem;
+  background-color: pink;
+  height: 5rem;
+}
+.bd div:nth-child(2) {
+  flex: 3;
+}

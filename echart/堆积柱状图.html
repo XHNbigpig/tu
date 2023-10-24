@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+    <title>Title</title>
+<!--引入echarts库文件-->
+<script src="../js/echarts.js"></script>
+</head>
+<body>
+<!--定义图标显示区域/容器-->
+<div id="main" style="width: 600px;height:400px"></div>
+<script type="text/javascript">
+var myChart=echarts.init(document.getElementById("main"));
+option = {
+    tooltip:{
+        trigger:'axis',  //选中显示
+    },
+    label:{
+        show:true  //显示数值
+      },
+    title:{
+        text:'各月服装销售量'
+    },
+    legend:{
+        data:['大衣','羽绒服','羊毛衫','裤子','靴子']
+    },
+    grid:{
+      // 图表位置
+        left:'3%',
+        right:'4%',
+        bottom:'3%',
+        containLabel:true
+    },
+  xAxis: {
+    type: 'category',
+    data: ['Mon','Tue','Wed','Thu','Fri','Sat','Sun']
+  },
+  yAxis: {
+    type: 'value'
+  },
+  series: [
+    { name:'大衣',
+      data: [320, 302, 301, 334, 390, 330, 320],
+      type: 'bar',
+      stack:'销量'
+    },
+    { name:'羽绒服',
+      data: [120,132,101,134,90,230,210],
+      type: 'bar',
+      stack:'销量'
+    },
+    {
+        name:'羊毛衫',
+      data: [220,182,191,234,290,330,310],
+      type: 'bar',
+      stack:'销量'
+
+    },
+
+    { name:'裤子',
+      data: [150,212,201,154,190,330,410],
+      type: 'bar',
+      stack:'销量'
+    },
+    { name:'靴子',
+      data: [820,832,901,934,1290,1330,1320],
+      type: 'bar',
+      stack:'销量'
+    },
+
+  ]
+};
+myChart.setOption(option);
+</script>
+</body>
+</html>

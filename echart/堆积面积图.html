@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../js/echarts.js"></script>
+</head>
+<body>
+    <div id="main" style="width:600px;height:400px"></div>
+    <script type="text/javascript">
+    var myChart=echarts.init(document.getElementById("main"));
+    var option={
+        title:{
+            text:'电子产品销量图'
+        },
+        legend:{
+            show:true,  // 
+            top:6,
+            data:['手机','冰箱','空调','电视','其他']
+        },
+        grid:{
+            // 图表位置
+            left:'3%',
+            right:'4%',
+            bottom:'3%',
+            containLabel:true
+        },
+        toolbox:{
+            feature:{
+                saveAsImage:{}   // 下载
+            }
+        },
+        tooltip:{
+
+        },
+        xAxis:{
+            type:'category',
+            boundaryGap:false,   // 从原点开始，不留白
+            data:['周一','周二','周三','周四','周五','周六','周天']
+        },
+        yAxis:{
+            type:'value'
+        },
+        series:[
+            {
+                name:'手机',
+                type:'line',
+                stack:'Total',    // 实现堆叠
+                areaStyle:{// 区域填充样式
+                },
+                data:[]
+            },
+            {
+                name:'冰箱',
+                type:'line',
+                stack:'Total',    // 实现堆叠
+                areaStyle:{// 区域填充样式
+                },
+                data:[]
+            },
+            {
+                name:'空调',
+                type:'line',
+                stack:'Total',    // 实现堆叠
+                areaStyle:{// 区域填充样式
+                },
+                data:[]
+            },
+            {
+                name:'电视',
+                type:'line',
+                stack:'Total',    // 实现堆叠
+                areaStyle:{// 区域填充样式
+                },
+                data:[]
+            },
+            {
+                name:'其他',
+                type:'line',
+                stack:'Total',    // 实现堆叠
+                areaStyle:{// 区域填充样式
+                },
+                data:[]
+            },
+        ]
+    }
+    myChart.setOption(option);
+</script>
+</body>
+</html>

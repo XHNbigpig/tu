@@ -1,0 +1,6 @@
+1.下载Vscode
+2.按照图1、图2安装插件Auto Rename Tag、Chinese、Bracket Pair Colorizer、Easy LESS、IntelliSense for CSS class names in HTML、JavaScript(ES6) code snippets、JS-CSS-HTML Formatter、open in browser、Polacode、px to rem。
+3.建一个文件夹echartsExam里面创建一个index.html文件
+  其次建立文件夹有css、image、js。如图3所示。
+4.css中新建文件1.less 并在1.less中编辑代码并保存，保存后随之产生一个1.css（在link标签里面引用css下的1.css）如图4所示。
+5.index.html中显示的是页面布局（新建的html文件中按住shift+！键进行快捷创建）

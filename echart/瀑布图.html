@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../js/echarts.js"></script>
+</head>
+<body>
+<div id="main" style="width:600px;height:400px"></div>
+<script type="text/javascript">
+var myChart=echarts.init(document.getElementById("main"));
+    var option={
+        title:{
+            text:'深圳月最低生活费组成（单位：元）',
+            subtext:'数据来自ExcellHome'
+        },
+        tooltip:{
+            trigger:'axis',
+            axisPointer:{
+                type:'shadow'
+            },
+            formatter:function (params) {
+                var tar = params[1];
+                return tar.name+'<br/>'+tar.seriesName+':'+tar.value;
+            }
+        },
+        toolbox:{
+            show:true,
+            feature:{
+                mark:{show:true},
+                dataView:{show:true,readOnly:false},
+                restore:{show:true},
+                saveAsImage:{show:true}
+            }
+        },
+        grid:{
+            left:'3%',
+            right:'4%',
+            bottom:'3%',
+            containLabel:true
+},
+        xAxis:[
+            {
+                type:'category',
+                splitLine:{show:false},
+                data:['总消费', '衣服', '生活用品', '电子产品', '伙食费']
+            }
+        ],
+        yAxis:[
+            {
+                type:'value'
+            }
+        ],
+        series:[
+            {
+                name:'辅助',
+                type:'bar',
+                stack:'total',
+                itemStyle:{
+                    borderColor:'transparent',
+                    color:'transparent'
+                },
+                data:[0,5600,5000,2000,0]
+            },
+            {
+                name:'生活费',
+                type:'bar',
+                stack:'total',
+                itemStyle:{
+                    normal:{label:{show:true,position:'inside'}}
+                },
+                data:[6800, 1200, 600, 3000, 2000]
+            }
+        ]
+    };
+myChart.setOption(option);
+</script>
+</body>
+</html>

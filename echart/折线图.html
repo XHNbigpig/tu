@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../js/echarts.js"></script>
+</head>
+<body>
+    <div id="main" style="width:600px;height:400px"></div>
+    <script type="text/javascript">
+    var myChart=echarts.init(document.getElementById("main"));
+    var option={
+        title:{
+            text:'衣服销售量统计',
+            left:'center'
+        },
+        xAxis:{
+            type:'category',
+            data:['风衣','羽绒服','羊毛衫','衬衣','夹克']
+        },
+        yAxis:{
+            type:'value'
+        },
+        tooltip:{
+            trigger:'axis',
+            axisPointer:{
+            type:'shadow'
+        },
+        },
+        series:[
+            {
+                name:'人流量',
+                type:'line',
+                symbol:'triangle',  // 三角形
+                symbolSize:20,
+                lineStyle:{      // 线条配置
+                    color:'blue',
+                    width:6,
+                    type:'dotted'   // 点线型
+                },
+                itemStyle:{   // 点配置
+                    borderColor:'red',
+                    borderWidth:3,
+                    color:'pink'
+                },
+                smooth:'true',   // 平滑曲线
+                label:{
+                    show:true   // 显示数值
+                },
+                markPoint:{
+                    data:[{
+                    type:'max',name:'最大值'
+                    },
+                    {
+                    type:'min',name:'最小值'
+                    }
+                    ]
+                },
+                markLine:{
+                    data:[{
+                        type:'average',name:'平均值'
+                    }]
+                },
+                data:[80,160,145,30,105]
+            }
+        ]
+    };
+    myChart.setOption(option);
+</script>
+</body>
+</html>

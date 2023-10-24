@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../js/echarts.js"></script>
+</head>
+<body>
+    <div id="main" style="width:600px;height:400px"></div>
+    <script type="text/javascript">
+    var myChart=echarts.init(document.getElementById("main"));
+    var option={
+        title: {
+            backgroundColr:'pink',
+            text: '某大学三大学院的专业分布',
+            textStyle:{
+                color:'blue',
+                fontFamily:'黑体',
+                fontSize:28
+            },
+            x:'center'
+        },
+        tooltip: {  // 提示框组件
+            trigger: 'item',
+            formattre:"{a} <br/>{b} : {c} ({d}%)"
+        },
+        legend: {  // 配置图例组件
+            // orient: 'vertical',   //图例列表的布局朝向,垂直
+            left: 62,   // 设置图例左边距
+            top:28,   // 设置图例顶边距
+            type:'scroll',
+            data:['1-软件技术','1-移动应用开发','2-大数据技术与应用','2-移动互联应用技术','2-云计算技术与应用','3-投资与理财','3-财务管理']
+        },
+        toolbox:{   // 配置工具箱组件
+            show:true,   // 设置工具箱组件是否显示
+            left:444,   // 设置工具箱左边距
+            top:28,   // 设置工具箱顶边距
+            feature:{
+                mark:{show:true},
+                DataView:{show:true,readOnly:false},
+                magicType:{
+                    show:true,
+                    type:['pie','funnel'],
+                    option:{
+                        funnel:{
+                            x:'25%',
+                            width:'50%',
+                            funnelAlign:'left',
+                            max:1548
+                        }
+                    }
+                },
+                restore:{shpw:true},
+                saveAsImage:{show:true}
+            }
+        },
+        calculable:false,
+        series: [
+            {
+            name: '专业名称',
+            type: 'pie',
+            selecteMode:'single',
+            center:['58%','55%'],   // 圆心坐标，默认值为['50%','50%']
+            radius: ['10%','30%'],  // 设置半径,默认值为[0,'75%'],圆环['45%','75%'],内外半径
+            label:{
+                position:'innet'
+            },
+            labelLine:{
+                show:false
+            },
+            data: [
+                { value: 1200, name: '计算机学院' },
+                { value: 900, name: '大数据学院' },
+                { value: 600, name: '财经学院' ,selected:true}
+            ],
+            emphasis: {
+                itemStyle: {
+                shadowBlur: 10,
+                shadowOffsetX: 0,
+                shadowColor: 'rgba(0, 0, 0, 0.5)'
+                }
+            }
+            },
+            {
+            name: '专业名称',
+            type: 'pie',
+            selecteMode:'single',
+            center:['58%','55%'],   // 圆心坐标，默认值为['50%','50%']
+            radius: ['40%','55%'],  // 设置半径,默认值为[0,'75%'],圆环['45%','75%'],内外
+            data: [
+                { value: 800, name: '1-软件技术' },
+                { value: 400, name: '1-移动应用开发' },
+                {value: 500, name: '2-大数据技术与应用'},
+                { value: 200, name: '2-移动互联应用技术' },
+                { value: 200, name: '2-云计算技术与应用'},
+                { value: 400, name: '3-投资与理财' },
+                { value: 200, name: '3-财务管理'}
+            ],
+            emphasis: {
+                itemStyle: {
+                shadowBlur: 10,
+                shadowOffsetX: 0,
+                shadowColor: 'rgba(0, 0, 0, 0.5)'
+                }
+            }
+            }            
+        ]
+        
+        };
+    myChart.setOption(option);
+</script>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../js/echarts.js"></script>
+</head>
+<body>
+    <div id="main" style="width:600px;height:400px"></div>
+    <script type="text/javascript">
+    var myChart=echarts.init(document.getElementById("main"));
+    var option={
+        title:{
+            text:'Temperature Change in Coming Week'
+        },
+        legend:{
+            show:true,
+            top:'6%',
+            data:['Highest','Lowest']
+        },
+        tooltip: {
+            trigger: 'axis',
+        },
+        grid:{
+            // 图表位置
+            left:'3%',
+            right:'4%',
+            bottom:'3%',
+            containLabel:true
+        },
+        toolbox:{
+            feature:{
+                saveAsImage:{}   // 下载
+            }
+        },
+        xAxis:{
+            type:'category',
+            boundaryGap:false,
+            data:['Mon','Tue','Wed','Thu','Fri','Sat','Sun']
+        },
+        yAxis:{
+            type:'value',
+            axisLabel: {
+                formatter: '{value} °C'   // 刻度标签
+            }
+        },
+        series:[
+            {
+                name:'Highest',
+                type:'line',
+                markPoint:{
+                    data:[
+                        {
+                            type:'max',name:'最大值'
+                        },
+                        {
+                            type:'min',name:'最小值'
+                        }
+                    ]
+                },
+                markLine:{
+                    data:[
+                        {
+                            type:'average',name:'平均值'
+                        }
+                    ]
+                },
+                data:[10,11,13,11,12,12,9]
+            },
+            {
+                name:'Lowest',
+                type:'line',
+                markPoint:{
+                    data:[
+                        {
+                            type:'max',name:'最大值'
+                        },
+                        {
+                            type:'min',name:'最小值'
+                        }
+                    ]
+                },
+                markLine:{
+                    data:[
+                        {
+                            type:'average',name:'平均值'
+                        }
+                    ]
+                },
+                data:[1,-2,2,5,3,2,0]
+            },
+        ]
+
+        
+    }
+    myChart.setOption(option);
+</script>
+</body>
+</html>
