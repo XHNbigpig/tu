@@ -1,0 +1,358 @@
+.header {
+    width: 100%;
+    height: 1.5rem
+}
+
+.header .header-left {
+    width: 25%;
+    height: 1.05rem;
+    color: #fff;
+    text-align: center;
+    line-height: 1.05rem
+}
+
+.header .header-center {
+    width: 50%;
+    height: 1.2rem;
+    position: relative
+}
+
+.header .header-center .header-title {
+    text-align: center;
+    color: #fff;
+    font-size: .4rem;
+    text-shadow: 0 0 .3rem #00d8ff;
+    line-height: 1.05rem
+}
+
+.header .header-img {
+    background: url(../images/head.gif) no-repeat center center;
+    background-size: 100%;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: .4rem
+}
+
+.header .header-right {
+    width: 25%;
+    height: 1.05rem
+}
+
+.header .header-bottom {
+    width: calc(100% - .4rem);
+    height: .16rem;
+    background: url(../images/header.png) no-repeat;
+    background-size: calc(100% - .2rem) 100%;
+    padding: 0 .2rem;
+    margin-left: .3rem
+}
+
+.center {
+    padding: .1rem .2rem
+}
+
+.center .center-left {
+    width: 25%;
+    padding: .1rem
+}
+
+.center .center-left .left-top {
+    width: 100%;
+    height: 3.2rem;
+    margin-bottom: .4rem
+}
+
+.center .center-left .left-top h1 {
+    color: #fff;
+    font-size: .4rem;
+    transform: rotateX(0deg);
+    align-items: center;
+    margin-bottom: 8px;
+    position: relative;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    transform-origin: 50% 50%;
+    transition: transform 500ms cubic-bezier(.15, .52, .5, .9) 0s;
+    transition: all 1s
+}
+
+.title {
+    width: 90%;
+    height: .3rem;
+    position: relative;
+    top: .1rem;
+    left: .25rem;
+    color: #fff;
+    padding-left: .12rem;
+    line-height: .3rem
+}
+
+.title:before {
+    width: .05rem;
+    height: .25rem;
+    top: .02rem;
+    position: absolute;
+    content: "";
+    background: #59ebe8;
+    border-radius: .02rem;
+    left: 0
+}
+
+.top-list p {
+    font-size: .18rem;
+    color: #029698;
+    padding: .3rem
+}
+
+.top-list li {
+    float: left;
+    font-size: .2rem;
+    color: #fff;
+    width: 50%;
+    height: .4rem;
+    line-height: .4rem;
+    padding: .2rem
+}
+
+.center .center-left .left-cen {
+    width: 100%;
+    height: 3.2rem;
+    margin-bottom: .4rem
+}
+
+.center .center-left .left-cen .company {
+    width: calc(100% - .2rem);
+    height: calc(100% - .6rem);
+    margin-left: .1rem;
+    margin-top: .1rem;
+    padding: .2rem;
+    box-sizing: border-box
+}
+
+.center .center-left .left-cen .company li {
+    color: #fff !important;
+    height: .3rem;
+    line-height: .3rem
+}
+
+.center .center-left .left-bottom {
+    width: 100%;
+    height: 3.2rem
+}
+
+.center .center-left .bottom-b {
+    width: calc(100% - 0.2rem);
+    height: 2.6rem;
+    margin-left: .1rem;
+    margin-top: .1rem
+}
+
+.center .center-cen {
+    width: 50%;
+    padding: .1rem
+}
+
+.center .center-cen .cen-top {
+    width: 100%;
+    height: 6.8rem;
+    margin-bottom: .4rem;
+    position: relative
+}
+
+.center .center-cen .cen-top .top-title {
+    position: absolute;
+    width: 35%;
+    height: 1.5rem;
+    left: .5rem;
+    top: .5rem
+}
+
+.center .center-cen .cen-top .top-title li {
+    float: left;
+    width: 50%;
+    height: 1rem
+}
+
+.center .center-cen .cen-top .top-title li p,
+.center .center-cen .cen-top .top-title li span,
+.center .center-cen .cen-top .top-title li b {
+    color: #fff
+}
+
+.center .center-cen .cen-top .top-title li p {
+    padding: .1rem
+}
+
+.center .center-cen .cen-top .top-title li span {
+    text-align: center;
+    display: inline-block;
+    width: .35rem;
+    height: .45rem;
+    background: #37a9ea;
+    margin-left: .1rem;
+    line-height: .4rem;
+    font-size: .3rem;
+    margin-top: .1rem
+}
+
+.center .center-cen .cen-top .top-bottom {
+    width: 100%;
+    height: 4.8rem;
+    position: absolute;
+    top: 1.6rem;
+    padding: .2rem
+}
+
+.center .center-cen .cen-bottom {
+    width: 100%;
+    height: 3.2rem
+}
+
+.center .center-cen .bottom-b {
+    width: calc(100% - 0.2rem);
+    height: 2.6rem;
+    margin-left: .1rem;
+    margin-top: .1rem
+}
+
+.center .center-right {
+    width: 25%;
+    padding: .1rem
+}
+
+.center .center-right .right-top {
+    width: 100%;
+    height: 3.2rem;
+    margin-bottom: .4rem
+}
+
+.center .center-right .right-cen {
+    width: 100%;
+    height: 3.2rem;
+    margin-bottom: .4rem;
+    border: 1px solid #0bc4e9;
+    background: rgba(0, 72, 115, .28);
+    transition: all 1s;
+    cursor: pointer;
+    position: relative
+}
+
+.center .center-right .right-cen .right-cen-cent {
+    width: calc(100% - 0.2rem);
+    height: 2.6rem;
+    margin-left: .1rem;
+    margin-top: .1rem
+}
+
+.center .center-right .right-bottom {
+    width: 100%;
+    height: 3.2rem
+}
+
+.center .center-right .right-bottom .chat {
+    width: calc(100% - 0.2rem);
+    height: 2.6rem;
+    margin-left: .1rem;
+    margin-top: .1rem
+}
+
+.gun {
+    margin-top: .2rem
+}
+
+.gun span {
+    display: block;
+    float: left;
+    height: .2rem;
+    width: 33%;
+    text-align: center;
+    font-size: .14rem;
+    font-weight: 600;
+    color: #61d2f7;
+    text-align: center;
+    margin-bottom: .1rem
+}
+
+#FontScroll {
+    width: 100%;
+    height: 2.3rem;
+    overflow: hidden;
+    margin-top: .1rem
+}
+
+#FontScroll ul li {
+    height: .32rem;
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    line-height: .32rem;
+    overflow: hidden;
+    font-size: .14rem
+}
+
+#FontScroll ul li:nth-child(1) {
+    box-shadow: -10px 0 15px #034c6a inset, 10px 0 15px #034c6a inset
+}
+
+#FontScroll ul li:hover {
+    box-shadow: -10px 0 15px #034c6a inset, 10px 0 15px #034c6a inset;
+    cursor: pointer
+}
+
+.fontInner span {
+    display: inline-block;
+    width: 31%;
+    color: #fff
+}
+
+.fontInner span b {
+    display: inline-block;
+    width: .2rem;
+    height: .2rem;
+    border-radius: .03rem;
+    color: #fff;
+    line-height: .2rem
+}
+
+#FontScroll ul li:nth-child(8n-4) .fontInner span b {
+    background: #20a8fe
+}
+
+#FontScroll ul li:nth-child(8n-3) .fontInner span b {
+    background: #eb6841
+}
+
+#FontScroll ul li:nth-child(8n-2) .fontInner span b {
+    background: #3fb8af
+}
+
+#FontScroll ul li:nth-child(8n-1) .fontInner span b {
+    background: #fe4365
+}
+
+#FontScroll ul li:nth-child(8n-5) .fontInner span b {
+    background: #fc9d9a
+}
+
+#FontScroll ul li:nth-child(8n-6) .fontInner span b {
+    background: #edc951
+}
+
+#FontScroll ul li:nth-child(8n-7) .fontInner span b {
+    background: #c8c8a9
+}
+
+#FontScroll ul li:nth-child(8n) .fontInner span b {
+    background: #83af9b
+}
+
+#FontScroll ul li:first-child .fontInner span b {
+    background: #036564
+}
+
+#FontScroll ul li:last-child .fontInner span b {
+    background: #3299bb
+}
